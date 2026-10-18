@@ -1,0 +1,31 @@
+---
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: bsc-thesis-in-python
+  title: B.Sc Thesis in Python.
+  description: Project to replicate my Bachelor Thesis (originally in R) into Python.
+  authors:
+    - name: Juan Taborda
+      affiliations: [University of Bonn]
+      email: jtabordaj@uni-bonn.de
+  keywords:
+    - radical innovations
+    - incremental innovations
+    - market structure
+    - k-means clustering
+  toc:
+    - file: documents/paper.md
+  exports:
+    - format: pdf
+      template: arxiv_nips
+      articles: documents/paper.md
+      parts:
+        abstract: abstract
+      bibtex: documents/refs.bib
+  exclude: [documents/presentation.md, documents/tables/*, documents/public/*]
+site:
+  template: book-theme
+  options:
+    favicon: null
+    logo: null
